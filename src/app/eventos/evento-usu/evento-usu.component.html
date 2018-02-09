@@ -1,0 +1,13 @@
+<p>
+  Evento Clientes
+</p>
+<lista-eventos-usuario [Usuario] = "Usuario" 
+[eventoUsuarios]= "eventoUsuarios"
+(borrarUsuarioEvento)="borrar($event)">
+</lista-eventos-usuario>
+<evento-buscar [eventoBuscado] ="eventoBuscado" 
+ [Usuario] = "Usuario" 
+ (eventoBuscarEvento)="buscarEvento($event)"
+ (eventoAnadidoEvento)="anadir($event)"  
+ ></evento-buscar>
+

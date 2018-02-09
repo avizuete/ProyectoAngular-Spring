@@ -1,0 +1,16 @@
+<div>
+  
+  <form (submit)="loginNegocio()" ngNativeValidate>
+    <h2 class="form-signin-heading">Inicia sesion Negocio</h2>
+    <label for="Usuario" class="sr-only">Usuario</label>
+    <input type="email" name="emailN" id="emailN" class="form-control" [(ngModel)]="negociologin.emailN" placeholder="Email"  required autofocus>
+    <label for="Password" class="sr-only">Password</label>
+    <input type="password"  name="passwordN" id="passwordN" class="form-control" [(ngModel)]="negociologin.passwordN" placeholder="Password" required>
+    
+    <button class="btn btn-lg btn-dark btn-block boton" type="submit">Login   </button>
+  </form>
+  <div *ngIf="error" class="alert alert-danger">{{error}}</div> 
+
+ 
+
+</div>

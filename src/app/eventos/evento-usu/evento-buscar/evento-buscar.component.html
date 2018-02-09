@@ -1,0 +1,73 @@
+<div class="contenido">
+  <h3>Buscar usuario</h3>
+  
+  <form (submit)="buscar()" ngNativeValidate>
+      
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              
+              <input type="text" name="nombre"  [(ngModel)]="eventoBuscar.negocio.nombreN" class="form-control" id="nombre" placeholder="nombre">
+            </div>
+            
+            </div>
+        <button type="submit" class="btn btn-primary boton" > Enviar</button>
+      </form>
+
+      <div class="table-responsive">
+      <table *ngIf="eventoBuscado" class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Bar</th>
+            <th></th>
+            
+             
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor=" let evento of eventoBuscado">
+            <td>{{evento.idEventoNegocio}}</td>
+            <td>{{evento.nombre}}</td>
+            <td>{{evento.fecha}}</td>
+            <td>{{evento.descripcion}}</td>
+            <td>{{evento.negocio.nombreN}}</td>
+            <td><button (click)="anadir($event,evento)" type="button" class="btn btn-danger" > Añadir</button></td>
+            
+          </tr>
+          
+        </tbody>   
+        </table>
+      </div>
+<!--     
+      <label *ngIf="!eventoBuscado ">Email no encontrado intentelo con otro</label>
+    
+    <table class="table" *ngIf="eventoBuscado">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Email</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{eventoBuscado.id}}</td>
+            <td>{{eventoBuscado.nombre}}</td>
+            <td>{{eventoBuscado.apellido}}</td>
+            <td>{{eventoBuscado.telefono}}</td>
+            <td>{{usuEma.email}}</td>
+            
+          </tr>
+          
+        </tbody>
+      
+        
+        
+      </table>-->
+    </div>

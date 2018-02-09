@@ -1,0 +1,13 @@
+
+ 
+<div >
+	<div class="panel panel-primary">
+		<div class="panel-heading">List of Images</div>
+		<div *ngFor="let file of fileUploads | async">
+			<div class="fotos">
+        <details-upload-usu [fileUpload]='file'></details-upload-usu>
+       
+			</div>
+		</div>
+	</div>
+</div>

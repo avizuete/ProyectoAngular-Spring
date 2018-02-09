@@ -1,0 +1,34 @@
+<div class="contenido">
+    <h3>Añadir Evento</h3>
+    
+    <form (submit)="crear()" ngNativeValidate >
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          
+          <input type="text" name="nombre" [(ngModel)]="nuevoEvento.nombre" class="form-control" id="nombre" placeholder="Nombre" required>
+        </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            
+            <input type="text" name="fecha" [(ngModel)]="nuevoEvento.fecha" class="form-control" id="fecha" placeholder="Fecha" required>
+          </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              
+              <input type="text" name="descripcion" [(ngModel)]="nuevoEvento.descripcion" class="form-control" id="descripcion" placeholder="Descripcion" required>
+            </div>
+            </div>
+         <div class="form-row">
+            <div class="form-group col-md-6">
+              
+              
+              <input type="text" name="IDnegocio"   class="form-control" id="IDnegocio" placeholder="Bar Organizador" value={{usuarioN.nombreN}} disabled >
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary boton" > Enviar</button>
+            
+      
+    </form>
+    </div>

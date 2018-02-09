@@ -1,0 +1,54 @@
+<div class="contenido">
+  <h3>Tus eventos</h3>
+  <div class="table-responsive">
+<!--<table *ngIf="eventoUsuarioCargados" class="table">-->
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre Evento</th>
+      <th scope="col">Nombre Usuario</th>
+      <th>Valoracion Anterior</th>
+      <th>Valoracion</th>
+      <th></th> 
+      
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let evento of eventoUsuarios">
+      
+      <td>{{evento.idEventoUsuario}}</td>
+      <td>{{evento.eventonegocio.nombre}}</td>
+      <td>{{evento.usuario.nombreU}}</td>
+      <td><valoracion-vigente [evento]= "evento"></valoracion-vigente></td>
+      <td>
+          <div >
+  
+              <select #selectElem id="inputState" class="form-control" (change)="valorar(selectElem.value,evento)">
+                <option selected>Valorar</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                
+              </select>
+            </div>
+        
+      
+      </td>
+       <td><button (click)="borrar(evento)" type="button" class="btn btn-danger" > Borrar</button></td>
+      <!--<td><button (click)="usuario.editable = !usuario.editable" type="button" class="btn btn-info" > Editar</button></td>-->
+      <!--<td><button (click)="enviar($event,usuario)" type="button" class="btn btn-light" > Enviar</button></td>-->
+      
+    </tr>
+    
+  </tbody>
+</table>
+</div>

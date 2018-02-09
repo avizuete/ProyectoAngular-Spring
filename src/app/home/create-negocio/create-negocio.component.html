@@ -1,0 +1,66 @@
+<div id="rou">
+    <h1><img id="imacabe"class="imatit  " src="assets/images/logo.png" alt="logo"></h1>
+  <div id="formu" class="formu">
+  <h3>Negocio</h3>
+
+
+  
+  <form (submit)="crear()" ngNativeValidate >
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nombre" class="control-label">Nombre</label>
+        <input type="text" name="nombre" [(ngModel)]="nuevoNegocio.nombreN"  class="form-control" id="nombre" placeholder="Nombre" required>
+        
+      </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="asunto" class="control-label">Direccion</label>
+           <input type="text" name="direccion" [(ngModel)]="nuevoNegocio.direccionN"  class="form-control" id="direccion" placeholder="Direccion" required>
+           
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="asunto" class="control-label">Horario</label>
+             <input type="text" name="horario" [(ngModel)]="nuevoNegocio.horarioN"  class="form-control" id="horario" placeholder="Horario" required>
+             
+            </div>
+          </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="asunto" class="control-label">Email</label>
+            <input type="email" name="email" [(ngModel)]="nuevoNegocio.emailN" (blur)='email($event)' class="form-control" id="email" placeholder="Email" required>
+            <label *ngIf="!emailRepe"> Email Repetido</label>
+          </div>
+         </div>
+         <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="asunto" class="control-label">Contraseña</label>
+            <input type="password" name="password" [(ngModel)]="nuevoNegocio.passwordN"  class="form-control" id="password" placeholder="Contraseña" required>
+              
+            </div>
+         </div>
+         <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="asunto" class="control-label">Repite la Contraseña</label>
+            <input type="password" name="Confirmapassword" [(ngModel)]="nuevoNegocio.ConfirmapasswordN" (blur)='passwordConf($event)' class="form-control" id="Confirmapassword" placeholder="Repite la Contraseña" required>
+            
+            <label *ngIf="passwordCorrecta"> Las contraseñas no coinciden</label>
+          </div>
+         </div>
+         <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="asunto" class="control-label">Foto de Perfil</label>
+            <input type="file" name="file" [(ngModel)]="nuevoNegocio.fotoN" (change)="file($event)"class="form-control" id="foto" placeholder="Foto" required>
+          </div>
+         </div>
+          <button type="submit" *ngIf="emailRepe" class="btn btn-warning boton" > Enviar</button>
+          <button type="submit" *ngIf="!emailRepe" class="btn btn-warning boton" disabled> Enviar</button>
+          <button type="button" (click)='volver($event)' class="btn btn-warning boton" > Volver</button>
+      
+    
+  </form>
+  </div>
+  </div>

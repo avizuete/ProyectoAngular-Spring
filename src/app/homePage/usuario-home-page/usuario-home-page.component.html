@@ -1,0 +1,57 @@
+<div id="container">
+<header>
+    <!--<img class="perfil" src="assets/images/default.png" />-->
+
+    <div id=" fotoPerfil" *ngFor="let file of fileUpload | async">
+                
+                <img class="perfil" src="{{file}}" alt="{{file}}" style="max-width:350px"/>
+       
+       
+    
+    </div>
+    <p></p>
+</header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-faded menu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon bg-warning"></span>
+                </button>
+        
+        <!-- Brand -->
+        
+        <!-- Links -->
+                <div class="collapse navbar-collapse" id="nav-content">   
+                        <ul class="navbar-nav">
+                                <li>
+                                        <p class="navbar-brand colorear" href="#">Usuario: <b *ngIf="usuariocargado">{{Usuario.nombreU}}</b></p>
+                                </li>
+                                <li class="nav-item">
+                                                <a  (click)='fotos($event)'  class="nav-link colorear" >Fotos</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a  class="nav-link colorear" (click)='goPerfil($event)'>Perfil</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a  (click)='eventos($event)'  class="nav-link colorear" >Eventos</a>
+                                </li>
+                                
+                        </ul>
+                </div>
+                <img class="logi" src="assets/images/logoParIco.png" alt="..." style="max-width:350px"/>
+        </nav>
+<section>
+<fotos-usu [Usuario] = "Usuario" *ngIf="foto && Usuario" > </fotos-usu>  
+
+<usuarios-update [Usuario] = "Usuario" *ngIf="perfil && usuariocargado"  (usuarioEditadoEvento)= "editar($event)" ></usuarios-update>
+
+<evento-usu [Usuario] = "Usuario"  *ngIf="evento"  > </evento-usu>
+
+
+
+
+<!--button (click)="logOut($evento)" type="button" class="btn btn-primary boton" > logOut</button-->  
+
+
+</section>
+<p class="nav-item"><a (click)="logOut($evento)"> <img class="logout" src="assets/images/logout.png"/>&nbsp;logout</a></p>
+</div>
+

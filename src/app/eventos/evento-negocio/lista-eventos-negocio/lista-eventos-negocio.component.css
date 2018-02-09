@@ -1,0 +1,68 @@
+
+.la{
+    color: gray;
+}
+.contenido{
+    width:100%;
+}
+@media screen and  (min-width: 500px) { 
+    #gra{
+        width: 50%;
+        position:relative;
+        float:left;
+    }
+
+    #datosgra{
+        width: 50%;
+        position:relative;
+        float:left; 
+    }
+    #controlador{
+        width: 100%;
+        position:relative;
+        float:left; 
+    }
+  
+  }
+   
+  /* Dispositivos medianos (ordenadores, anchura mayor o igual a 992px) */
+  @media screen and  (min-width: 451px) { 
+    #gra{
+        width: 50%;
+        position:relative;
+        float:left;
+    }
+
+    #datosgra{
+        width: 24%;
+        position:relative;
+        float:left; 
+        margin-left:25%;
+    }
+    #controlador{
+        width: 100%;
+        position:relative;
+        float:left; 
+        margin-left:25%;
+    }
+   }
+   
+  /* Dispositivos grandes (ordenadores, anchura mayor o igual a 1200px) */
+  @media screen and  (max-width: 450px) {
+
+    #gra{
+        width: 100%;
+       
+    }
+
+    #datosgra{
+        text-align:center;
+        font-size:2em;
+        width: 100%; 
+    }
+    #controlador{
+        width: 100%; 
+        margin-bottom:3%;
+    }
+  
+    }

@@ -1,0 +1,53 @@
+<div class="container col-md-8 col-md-offset-8">
+
+  <h3>Editar Usuario</h3>
+  <h1>{{usuarioEditar.nombreU}}</h1>
+ 
+  <form (submit)="editar()" ngNativeValidate>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label  class="control-label">Nombre</label>
+          <input type="text" name="nombreU" [(ngModel)]="usuarioEditar.nombreU" class="form-control" id="nombreU" placeholder="Nombre" required>
+        </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label  class="control-label">Apellido</label>
+            <input type="text" name="apellidosU" [(ngModel)]="usuarioEditar.apellidosU" class="form-control" id="apellidosU" placeholder="Apellido" required>
+          </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label  class="control-label">Email</label>
+              <input type="emailU" name="emailU" [(ngModel)]="usuarioEditar.emailU" (blur)='email($event)' class="form-control" id="emailU" placeholder="Email" required>
+            </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label  class="control-label">Contraseña</label>
+                <input type="password" name="passwordU" [(ngModel)]="_usuarioEditar.passwordU" (blur)='password($event)' class="form-control" id="passwordU" placeholder="Contraseña" >
+                  
+                </div>
+             </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label  class="control-label">Repite la Contraseña</label>
+                <input type="password" name="Confirmapassword" [(ngModel)]="_usuarioEditar.ConfirmapasswordU" (blur)='passwordConf($event)' class="form-control" id="Confirmapassword" placeholder="Repite la Contraseña" >
+                <label *ngIf="!passwordConUsua"> Este campo no puede quedar Vacio</label>
+                <label *ngIf="passwordCorrecta"> Las contraseñas no coinciden</label>
+              </div>
+             </div>
+
+             <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label  class="control-label">Foto de Perfil</label>
+                <input type="file" name="file" [(ngModel)]="_usuarioEditar.fotoPerfilU" (change)="file($event)"class="form-control" id="foto" placeholder="Foto" >
+              </div>
+             </div>   
+          
+             <button type="submit" *ngIf="passwordConUsua" class="btn btn-warning" > Enviar</button>
+             <button type="submit" *ngIf="!passwordConUsua" class="btn btn-warning" disabled> Enviar</button>
+        
+      
+    </form>
+  </div>

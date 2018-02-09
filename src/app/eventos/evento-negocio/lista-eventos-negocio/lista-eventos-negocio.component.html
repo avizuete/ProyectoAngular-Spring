@@ -1,0 +1,30 @@
+<div class="container">
+  <h3>Tus eventos</h3>
+
+  <div *ngFor=" let evento of eventosN">
+      <div id="datosgra">
+        <p><label class="la">ID:</label> {{evento.idEventoNegocio}}</p>
+        <p><label class="la">Nombre:</label> {{evento.nombre}}</p>
+        <p><label class="la">Fecha:</label> {{evento.fecha}}</p>
+        <p><label class="la">Descripcion:</label> {{evento.descripcion}}</p>
+        <p><label class="la">Bar de la Promocion:</label> {{evento.negocio.nombreN}}</p>
+      </div>
+      
+     <div id="gra">
+        <graficaas-eventos [evento] ="evento"></graficaas-eventos>
+      </div>
+      <div id="controlador">
+        <button (click)="borrar(evento)" type="button" class="btn btn-danger" > Borrar</button>
+        <button (click)="enviar($event,usuario)" type="button" class="btn btn-light" > Enviar</button>
+      </div>
+  </div>
+  
+
+</div>
+
+
+
+
+
+
+

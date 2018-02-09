@@ -1,0 +1,12 @@
+#container{
+    color:#FFC107;
+}
+
+.logout{
+    width:10%;
+    margin-left: 5%;
+}
+.perfil{
+    max-width: 200px;
+    max-height: 200px;
+}

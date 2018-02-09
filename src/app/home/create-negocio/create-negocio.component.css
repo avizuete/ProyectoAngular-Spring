@@ -1,0 +1,41 @@
+#formu{
+    background-color: #1b1b1b !important;
+    color:#FFC107; 
+}
+
+ #rou{     
+    width: 100%;
+}
+.imatit{
+    max-width: 100%;
+      height: auto;
+    
+  }
+  @media screen and  (min-width: 500px) { 
+    .formu{
+       
+        margin-left:30%
+    }
+      
+      #imacabe{      
+        width: 20%;
+        margin-left:38%
+      }
+  }
+   
+  /* Dispositivos medianos (ordenadores, anchura mayor o igual a 992px) */
+  @media screen and  (max-width: 551px) { 
+  
+   
+   }
+   
+  /* Dispositivos grandes (ordenadores, anchura mayor o igual a 1200px) */
+  @media screen and  (max-width: 450px) {
+        #formu{
+            font-size: 2em;
+        }
+        #imacabe{      
+            width: 100%;
+            
+          }
+    }

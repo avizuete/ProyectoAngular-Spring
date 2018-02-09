@@ -1,0 +1,145 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #FFC107;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #FFC107;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.ima{
+  max-width: 100%;
+  height: auto;
+}
+
+.tit{
+  text-align:center;
+}
+.tope{
+  
+  margin-top:2%;
+}
+.imatit{
+  max-width: 100%;
+    height: auto;
+  
+}
+body{
+  background-color: #1b1b1b !important;
+  
+}
+#container{
+  background-color: #1b1b1b;
+}
+.imaBlock{
+
+    max-width:60%;
+      height: auto;
+    
+
+}
+#blokes{
+  margin-top:5%; 
+}
+.caption{
+  color:#FFC107;
+}
+.mocolor{
+  background-color: #1b1b1b;
+  color:#FFC107;
+}
+footer{
+  background-color: #1b1b1b;
+  color:#FFC107;
+}
+footer li{
+  list-style-type: none;
+}
+footer a{
+  color:#FFC107; 
+}
+.carousel-caption{
+  text-shadow: #1b1b1b;
+  color:white;
+}
+.coloreado{
+  background-color: #FFC107;
+}
+
+@media screen and  (min-width: 500px) { 
+ 
+  #imacabe{
+    width: 20%;
+  }
+}
+ 
+/* Dispositivos medianos (ordenadores, anchura mayor o igual a 992px) */
+@media screen and  (min-width: 451px) { 
+  #demo2{
+    display: none;
+    
+  }
+ }
+ 
+/* Dispositivos grandes (ordenadores, anchura mayor o igual a 1200px) */
+@media screen and  (max-width: 450px) {
+#demo{
+   display: none;
+}
+#demo2{
+  display: block;
+  color:#FFC107;
+}
+.log{
+  padding: 55px 35px;
+}
+
+
+  }
